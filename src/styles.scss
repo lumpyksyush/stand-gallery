@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: DIN Pro;
+  src: ("./assets/fonts/DIN_Pro.otf");
+}
+
+@font-face {
+  font-family: Abril Fatface;
+  src: ("./assets/fonts/AbrilFatface-Regular.ttf");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: #444;
+  font-family: DIN Pro;
+  background-color: #fff2d4;
+  overflow: hidden;
+}
+
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}

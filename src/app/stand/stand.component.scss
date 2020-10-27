@@ -1,0 +1,27 @@
+.stand__container {
+  width: 70%;
+  text-align: right;
+
+  &_info {
+    &-owner {
+      color: #aaa;
+      font-size: 26px;
+      font-weight: 500;
+    }
+
+    &-name {
+      font-family: Abril Fatface;
+      font-size: 56px;
+    }
+
+    &-descr {
+      font-size: 22px;
+      font-weight: lighter;
+      letter-spacing: 1.2;
+      max-width: 240px;
+    }
+  }
+
+  &_portrait {
+  }
+}
