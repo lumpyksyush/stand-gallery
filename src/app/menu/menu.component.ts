@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
+import { Stand } from '../stand/stand.model';
 
 import { StandService } from '../stand/stand.service';
 
@@ -8,7 +10,16 @@ import { StandService } from '../stand/stand.service';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
+  @Output() selectStandEvent = new EventEmitter<Stand>();
+  stands: Stand[];
+
   constructor(private standService: StandService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.stands = this.standService.getStands();
+  }
+
+  onSelect(stand: Stand): void {
+    this.selectStandEvent.emit(stand);
+  }
 }

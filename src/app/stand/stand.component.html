@@ -4,5 +4,9 @@
     <h2 class="stand__container_info-name">{{ stand.name | uppercase }}</h2>
     <p class="stand__container_info-descr">{{ stand.descrShort }}</p>
   </div>
-  <img src="{{ stand.avatarUrl }}" alt="" class="stand__container_portrait" />
+  <img
+    src="{{ stand.avatarUrl }}"
+    alt="{{ stand.name }}"
+    class="stand__container_portrait"
+  />
 </div>

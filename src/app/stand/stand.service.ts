@@ -8,9 +8,14 @@ import { Stand } from './stand.model';
 })
 export class StandService {
   stands = STANDS;
+
   constructor() {}
 
-  getStand(name: string): Stand {
-    return this.stands.find((stand) => stand.name === name);
+  getStands(): Stand[] {
+    return this.stands;
+  }
+
+  getStand(id: number): Stand {
+    return this.stands.find((stand) => stand.id === id);
   }
 }

@@ -1,4 +1,4 @@
 <div class="main">
-  <app-menu></app-menu>
-  <app-stand></app-stand>
+  <app-menu (selectStandEvent)="getSelectedStand($event)"></app-menu>
+  <app-stand [ngStyle]="getStyles()" [stand]="selectedStand"></app-stand>
 </div>
